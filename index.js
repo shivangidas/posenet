@@ -20,11 +20,31 @@ posenet
   .then(function(pose) {
     console.log(pose);
 
-    context.fillRect(
+    /* context.fillRect(
       pose.keypoints[0].position.x,
       pose.keypoints[0].position.y,
       3,
       3
+    ); */
+    context.beginPath();
+    context.moveTo(
+      pose.keypoints[0].position.x,
+      pose.keypoints[0].position.y + 10
+    );
+    context.lineTo(
+      pose.keypoints[0].position.x - 10,
+      pose.keypoints[0].position.y + 20
+    );
+    context.lineTo(
+      pose.keypoints[0].position.x + 10,
+      pose.keypoints[0].position.y + 20
+    );
+    context.fill();
+    context.fillRect(
+      pose.keypoints[0].position.x - 2,
+      pose.keypoints[0].position.y + 20,
+      4,
+      10
     );
     //context.fillStyle = "white";
     context.font = "20px Arial";
