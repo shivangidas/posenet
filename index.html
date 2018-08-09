@@ -10,10 +10,32 @@
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.11.7"></script>
     <!-- Load Posenet -->
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/posenet@0.1.2"></script>
+    <style>
+        #image {
+            position: absolute;
+            z-index: 1;
+        }
+
+        #container {
+            display: inline-block;
+            margin: 0 auto;
+            background: black;
+            position: relative;
+            border: 5px solid black;
+            border-radius: 10px;
+            box-shadow: 0 5px 50px #333
+        }
+
+        #poseCanvas {
+            position: relative;
+            z-index: 20;
+        }
+    </style>
 </head>
 
 <body>
-    <img id='cat' src='cat.jpg' />
+    <img id='image' src='https://raw.githubusercontent.com/shivangidas/posenet/master/IMG-20180609-WA0037.jpg' crossorigin/>
+    <canvas id="poseCanvas"></canvas>
     <script src="index.js"></script>
 </body>
 
