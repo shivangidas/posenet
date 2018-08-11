@@ -11,7 +11,7 @@
     <!-- Load Posenet -->
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/posenet@0.1.2"></script>
     <style>
-        #image {
+        #video {
             position: absolute;
             z-index: 1;
         }
@@ -34,8 +34,9 @@
 </head>
 
 <body>
-    <img id='image' src='https://raw.githubusercontent.com/shivangidas/posenet/master/twoPeople.jpg' crossorigin/>
-    <canvas id="poseCanvas"></canvas>
+    <!-- <img id='image' src='https://skillshare-demo.herokuapp.com/testImage' crossorigin/> -->
+    <video id="video" width="800" height="750" autoplay></video>
+    <canvas id="poseCanvas" width="800" height="750"></canvas>
     <script src="index.js"></script>
 </body>
 
